@@ -1,5 +1,5 @@
-// src/contexts/ProgressContext.js
-import { createContext, useState, useEffect } from 'react';
+// src/contexts/ProgressContext.jsx
+import React, { createContext, useState, useEffect } from 'react';
 
 export const ProgressContext = createContext();
 

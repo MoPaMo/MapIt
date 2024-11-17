@@ -1,20 +1,28 @@
 // src/components/Map.jsx
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { ProgressContext } from '../contexts/ProgressContext';
 
 const geoUrl =
-  '/world-countries-sans-antarctica.json';
+  '/countries.json';
 
-function Map({ mode }) {
+function Map({ mode, targetCountry, onCorrect }) {
   const { updateProgress } = useContext(ProgressContext);
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [feedback, setFeedback] = useState('');
 
   const handleCountryClick = (geo) => {
-    const countryName = geo.properties.NAME;
+    console.log(geo.properties); // Add this line
+    const countryName = geo.properties.ADMIN; // or use the correct property
     setSelectedCountry(countryName);
     updateProgress(mode, countryName);
-    // Add logic to prompt the user to spot the country
+  
+    if (countryName === targetCountry) {
+      setFeedback('Correct! Well done.');
+      onCorrect();
+    } else {
+      setFeedback(`Incorrect. You selected ${countryName}. Try again.`);
+    }
   };
 
   return (
@@ -38,6 +46,7 @@ function Map({ mode }) {
         </Geographies>
       </ComposableMap>
       {selectedCountry && <p>You selected: {selectedCountry}</p>}
+      {feedback && <p>{feedback}</p>}
     </div>
   );
 }
