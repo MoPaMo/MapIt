@@ -1,10 +1,10 @@
-// src/components/Map.js
+// src/components/Map.jsx
+import React, { useContext, useState } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import { useContext, useState } from 'react';
 import { ProgressContext } from '../contexts/ProgressContext';
 
 const geoUrl =
-  'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries-sans-antarctica.json';
+  '/world-countries-sans-antarctica.json';
 
 function Map({ mode }) {
   const { updateProgress } = useContext(ProgressContext);
@@ -14,7 +14,7 @@ function Map({ mode }) {
     const countryName = geo.properties.NAME;
     setSelectedCountry(countryName);
     updateProgress(mode, countryName);
-    // Add logic to check if the selected country is correct
+    // Add logic to prompt the user to spot the country
   };
 
   return (
