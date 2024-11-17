@@ -1,0 +1,25 @@
+/* src/styles.css */
+@import 'shadcn/dist/shadcn.css';
+
+.container {
+  padding: 20px;
+}
+
+.game-mode-selector ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-mode-selector li {
+  margin: 10px 0;
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard th, .dashboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}

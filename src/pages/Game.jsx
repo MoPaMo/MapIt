@@ -1,6 +1,6 @@
 // src/pages/Game.js
 import { useParams } from "react-router-dom";
-import Map from "../components/Map";
+import Map from "../components/Map.jsx";
 
 function Game() {
   const { mode } = useParams();

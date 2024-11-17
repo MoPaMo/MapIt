@@ -1,6 +1,6 @@
 // src/pages/Home.js
 import { Link } from 'react-router-dom';
-import GameModeSelector from '../components/GameModeSelector';
+import GameModeSelector from '../components/GameModeSelector.jsx';
 
 function Home() {
   return (
