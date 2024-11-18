@@ -37,7 +37,7 @@ function Game() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen bg-gray-100 flex flex-col w-full">
 
       <header className="bg-blue-600 text-white py-4 shadow-md">
         <div className="container mx-auto px-4">
@@ -45,7 +45,7 @@ function Game() {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6 flex flex-col lg:flex-row">
+      <main className="flex-1 container mx-auto px-4 py-6 flex flex-col lg:flex-row w-full">
         <div className="lg:w-1/4 mb-6 lg:mb-0">
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">

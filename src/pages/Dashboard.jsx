@@ -6,7 +6,7 @@ function Dashboard() {
   const { progress } = useContext(ProgressContext);
 
   return (
-    <div className="dashboard">
+    <div className="dashboard w-full" >
       <h2>Progress Dashboard</h2>
       {Object.keys(progress).map((mode) => (
         <div key={mode}>

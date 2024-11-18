@@ -35,7 +35,7 @@ export function ProgressProvider({ children }) {
   };
 
   return (
-    <ProgressContext.Provider value={{ progress, updateProgress }}>
+    <ProgressContext.Provider value={{ progress, updateProgress }} className="w-full">
       {children}
     </ProgressContext.Provider>
   );
