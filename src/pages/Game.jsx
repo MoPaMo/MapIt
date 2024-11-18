@@ -41,7 +41,7 @@ function Game() {
 
       <header className="bg-blue-600 text-white py-4 shadow-md">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold">Map Learning Game</h1>
+          <h1 className="text-2xl font-bold">MapIt!</h1>
         </div>
       </header>
 
@@ -69,7 +69,7 @@ function Game() {
 
       <footer className="bg-blue-600 text-white py-4">
         <div className="container mx-auto px-4 text-center">
-          &copy; {new Date().getFullYear()} Map Learning Game
+          &copy; {new Date().getFullYear()} MapIt! 
         </div>
       </footer>
     </div>
